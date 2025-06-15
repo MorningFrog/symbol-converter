@@ -1,0 +1,8 @@
+{
+    "extension.displayName": "符号转换器",
+    "extension.description": "在输入文本时自动转换符号。默认为全角字符转换为半角字符。",
+    "extension.configuration.title": "符号转换器",
+    "extension.configuration.include-files.description": "符号替换生效的文件名，可以设置多个匹配模式。使用`*`表示匹配多个任意字符。例：`[\"*.py\", \"*.cpp\"]`",
+    "extension.configuration.exclude-files.description": "符号替换排除的文件名，用于在生效的文件名模式中排除特定的文件。使用`*`表示匹配多个任意字符。例：`[\"*.md\", \"*.txt\"]`",
+    "extension.configuration.rules.description": "替换规则。如 `{\"。\": \".\"}` 表示将所有的 `。` 替换为 `.`。可以设置多个规则。"
+}

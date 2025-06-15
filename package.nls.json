@@ -1,0 +1,8 @@
+{
+    "extension.displayName": "Symbol Converter",
+    "extension.description": "Automatically convert symbols when entering. By default, full-width characters are converted to half-width characters.",
+    "extension.configuration.title": "Symbol Converter",
+    "extension.configuration.include-files.description": "The filenames for which symbol replacement takes effect can have multiple matching patterns. Use `*` to match any number of arbitrary characters. Example: `[\"*.py\", \"*.cpp\"]`",
+    "extension.configuration.exclude-files.description": "The filenames to be excluded from symbol replacement, used to exclude specific files from the effective filename patterns. Use `*` to match any number of arbitrary characters. Example: `[\"*.md\", \"*.txt\", \"package.json\"]`",
+    "extension.configuration.rules.description": "Replacement rules. For example, `{\"。\": \".\"}` means replacing all `。` with `.`. Multiple rules can be configured."
+}
