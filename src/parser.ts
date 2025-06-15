@@ -3,7 +3,7 @@ import * as vscode from "vscode";
 export class Parser {
     private includeRegexes: RegExp[];
     private excludeRegexes: RegExp[];
-    private symbolConvertRules: { [key: RegExp]: string };
+    private symbolConvertRules: { [key: string]: string };
     private filenameLast = ""; // the last filename processed
     private filenameSatisfied = false; // whether the last filename satisfied the include/exclude patterns
 
@@ -81,6 +81,10 @@ export class Parser {
 
         // check if filename satisfies include and exclude patterns
         const fileName = activeEditor.document.fileName.split(/[\\/]/).pop();
+        if (!fileName) {
+            // If no filename is available, return the text as is
+            return activeEditor.document.getText();
+        }
         if (this.filenameLast === fileName) {
             // If the filename hasn't changed, return the last processed text
             if (!this.filenameSatisfied) {
